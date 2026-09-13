@@ -134,14 +134,14 @@
   },
   "ProjectsPage": {
     "eyebrow": "Projects",
-    "title": "We're building our gallery",
-    "subtitle": "We're putting together photos of our most recent work so you can see the quality for yourself. Soon you'll be able to see real pruning, design and maintenance projects from Tarragona and Reus right here.",
-    "comingSoon": "Coming soon",
-    "meanwhileTitle": "In the meantime, tell us about your project",
-    "meanwhileText": "Send us photos of your garden on WhatsApp and we'll give you an initial, informal assessment.",
+    "title": "Real work in Tarragona and Reus",
+    "subtitle": "A sample of our pruning, clearing and garden maintenance work. Real photos from our day-to-day jobs, no staging.",
+    "beforeAfterTitle": "Before & after",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
     "categoryPruning": "Pruning & arboriculture",
-    "categoryDesign": "Garden design",
-    "categoryMaintenance": "Maintenance"
+    "categoryClearing": "Clearing & waste removal",
+    "categoryMaintenance": "Garden maintenance"
   },
   "AboutPage": {
     "eyebrow": "About us",

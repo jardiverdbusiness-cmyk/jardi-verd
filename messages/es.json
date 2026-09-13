@@ -134,14 +134,14 @@
   },
   "ProjectsPage": {
     "eyebrow": "Proyectos",
-    "title": "Estamos preparando nuestra galería",
-    "subtitle": "Estamos recopilando fotografías de nuestros trabajos más recientes para que puedas ver la calidad de nuestro trabajo. Muy pronto podrás ver aquí proyectos reales de poda, diseño y mantenimiento de jardines en Tarragona y Reus.",
-    "comingSoon": "Muy pronto",
-    "meanwhileTitle": "Mientras tanto, cuéntanos tu proyecto",
-    "meanwhileText": "Envíanos fotos de tu jardín por WhatsApp y te daremos una primera valoración orientativa.",
+    "title": "Trabajos reales en Tarragona y Reus",
+    "subtitle": "Una muestra de nuestros trabajos de poda, desbroce y mantenimiento de jardines. Fotografías reales de nuestro trabajo del día a día, sin montajes.",
+    "beforeAfterTitle": "Antes y después",
+    "beforeLabel": "Antes",
+    "afterLabel": "Después",
     "categoryPruning": "Poda y arboricultura",
-    "categoryDesign": "Diseño de jardines",
-    "categoryMaintenance": "Mantenimiento"
+    "categoryClearing": "Desbroce y gestión de restos",
+    "categoryMaintenance": "Mantenimiento de jardines"
   },
   "AboutPage": {
     "eyebrow": "Sobre nosotros",

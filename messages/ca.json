@@ -134,14 +134,14 @@
   },
   "ProjectsPage": {
     "eyebrow": "Projectes",
-    "title": "Estem preparant la nostra galeria",
-    "subtitle": "Estem recopilant fotografies dels nostres treballs més recents perquè puguis veure la qualitat de la nostra feina. Molt aviat podràs veure aquí projectes reals de poda, disseny i manteniment de jardins a Tarragona i Reus.",
-    "comingSoon": "Molt aviat",
-    "meanwhileTitle": "Mentrestant, explica'ns el teu projecte",
-    "meanwhileText": "Envia'ns fotos del teu jardí per WhatsApp i et donarem una primera valoració orientativa.",
+    "title": "Feines reals a Tarragona i Reus",
+    "subtitle": "Una mostra dels nostres treballs de poda, desbrossament i manteniment de jardins. Fotografies reals de la nostra feina del dia a dia, sense muntatges.",
+    "beforeAfterTitle": "Abans i després",
+    "beforeLabel": "Abans",
+    "afterLabel": "Després",
     "categoryPruning": "Poda i arboricultura",
-    "categoryDesign": "Disseny de jardins",
-    "categoryMaintenance": "Manteniment"
+    "categoryClearing": "Desbrossament i gestió de restes",
+    "categoryMaintenance": "Manteniment de jardins"
   },
   "AboutPage": {
     "eyebrow": "Qui som",
