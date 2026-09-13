@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { businessInfo } from "@/lib/areas-data";
@@ -38,7 +39,37 @@ export default async function AboutPage({
 
       <section className="bg-cream-50 py-16 sm:py-20">
         <div className="container-page">
-          <h2 className="font-display text-2xl font-semibold text-forest-900">
+          <div className="grid grid-cols-3 gap-4">
+            <div className="relative col-span-2 row-span-2 aspect-[4/3] overflow-hidden rounded-xl2">
+              <Image
+                src="/images/work/poda-cypress-removal-2.jpg"
+                alt="Equip de Jardí Verd treballant en una tala"
+                fill
+                sizes="(min-width: 640px) 60vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-xl2">
+              <Image
+                src="/images/work/poda-storm-cutting.jpg"
+                alt="Trossejant un pi caigut amb motoserra"
+                fill
+                sizes="(min-width: 640px) 20vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-xl2">
+              <Image
+                src="/images/work/garden-lemon-tree.jpg"
+                alt="Jardí particular cuidat per Jardí Verd"
+                fill
+                sizes="(min-width: 640px) 20vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <h2 className="mt-14 font-display text-2xl font-semibold text-forest-900">
             {t("valuesTitle")}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">

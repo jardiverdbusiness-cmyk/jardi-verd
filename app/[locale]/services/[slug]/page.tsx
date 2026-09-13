@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { services, getServiceBySlug } from "@/lib/services-data";
+import { getServicePhotos } from "@/lib/projects-data";
 import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
@@ -43,6 +45,7 @@ export default async function ServiceDetailPage({
   const t = await getTranslations({ locale, namespace: "ServiceDetail" });
   const Icon = serviceIconMap[service.icon];
   const otherServices = services.filter((s) => s.id !== service.id).slice(0, 3);
+  const galleryPhotos = getServicePhotos(service.id);
 
   return (
     <>
@@ -78,6 +81,30 @@ export default async function ServiceDetailPage({
                 </li>
               ))}
             </ul>
+
+            {galleryPhotos.length > 0 && (
+              <>
+                <h2 className="mt-10 font-display text-xl font-semibold text-forest-900">
+                  {t("gallery")}
+                </h2>
+                <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {galleryPhotos.map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="relative aspect-square overflow-hidden rounded-xl border border-forest-900/8"
+                    >
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt[locale]}
+                        fill
+                        sizes="(min-width: 640px) 200px, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
 
             <div className="mt-12 rounded-xl2 border border-forest-900/10 bg-white p-6">
               <h3 className="font-display text-lg font-semibold text-forest-900">

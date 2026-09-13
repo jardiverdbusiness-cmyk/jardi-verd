@@ -13,6 +13,7 @@ export type ServiceIcon =
 export interface ServiceContent {
   id: string;
   icon: ServiceIcon;
+  image?: string;
   slug: Record<Locale, string>;
   title: Record<Locale, string>;
   shortDescription: Record<Locale, string>;
@@ -24,6 +25,7 @@ export const services: ServiceContent[] = [
   {
     id: "desbrossament",
     icon: "scrub",
+    image: "/images/work/clearing-lot-after.jpg",
     slug: {
       ca: "desbrossament",
       es: "desbroce",
@@ -68,6 +70,7 @@ export const services: ServiceContent[] = [
   {
     id: "poda-tala",
     icon: "tree",
+    image: "/images/work/poda-climbing.jpg",
     slug: {
       ca: "poda-i-tala-darbres",
       es: "poda-y-tala-de-arboles",
@@ -112,6 +115,7 @@ export const services: ServiceContent[] = [
   {
     id: "gestio-restes",
     icon: "leaf-bin",
+    image: "/images/work/clearing-trailer-forest.jpg",
     slug: {
       ca: "gestio-de-restes-organiques",
       es: "gestion-de-restos-organicos",
@@ -156,6 +160,7 @@ export const services: ServiceContent[] = [
   {
     id: "neteja-jardins",
     icon: "broom",
+    image: "/images/work/cleanup-driveway-after.jpg",
     slug: {
       ca: "neteja-de-jardins",
       es: "limpieza-de-jardines",
@@ -200,6 +205,7 @@ export const services: ServiceContent[] = [
   {
     id: "manteniment-jardins",
     icon: "watering-can",
+    image: "/images/work/garden-conifer-patio.jpg",
     slug: {
       ca: "manteniment-de-jardins",
       es: "mantenimiento-de-jardines",
@@ -288,6 +294,7 @@ export const services: ServiceContent[] = [
   {
     id: "tractaments-fitosanitaris",
     icon: "shield",
+    image: "/images/work/poda-cypress-removal-1.jpg",
     slug: {
       ca: "tractaments-fitosanitaris",
       es: "tratamientos-fitosanitarios",
@@ -332,6 +339,7 @@ export const services: ServiceContent[] = [
   {
     id: "posta-a-punt",
     icon: "sparkles",
+    image: "/images/work/garden-patio-bench.jpg",
     slug: {
       ca: "posades-a-punt-de-jardins",
       es: "puestas-a-punto-de-jardines",

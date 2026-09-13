@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { businessInfo } from "@/lib/areas-data";
@@ -58,23 +59,18 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-sm rounded-xl2 bg-gradient-to-br from-forest-700 to-forest-800 shadow-card lg:max-w-none">
-          <div className="absolute inset-0 flex items-center justify-center rounded-xl2 border border-cream-50/10">
-            <div className="flex flex-col items-center gap-3 px-6 text-center">
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-cream-100/10">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.2}
-                  className="h-9 w-9 text-cream-100/60"
-                >
-                  <path d="M20 4C10 4 4 10 4 18c0 1.1.9 2 2 2 8 0 14-6 14-16z" strokeLinejoin="round" />
-                  <path d="M6 18C10 14 14 10 19 5" strokeLinecap="round" />
-                </svg>
-              </span>
-              <p className="text-sm text-cream-100/50">Jardí Verd</p>
-            </div>
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl2 shadow-card lg:max-w-none">
+          <Image
+            src="/images/work/poda-cypress-removal-2.jpg"
+            alt="Equip de Jardí Verd treballant en una tala controlada"
+            fill
+            priority
+            sizes="(min-width: 1024px) 40vw, (min-width: 640px) 384px, 100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 rounded-xl2 border border-cream-50/10" />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/70 to-transparent p-5">
+            <p className="text-sm font-medium text-cream-50">Jardí Verd</p>
           </div>
         </div>
       </div>

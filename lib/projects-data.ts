@@ -223,3 +223,54 @@ export const workCategories: {
     ],
   },
 ];
+
+const allWorkPhotos: WorkPhoto[] = workCategories.flatMap((category) => category.photos);
+
+const servicePhotosBySlug: Record<string, string[]> = {
+  desbrossament: [
+    "/images/work/clearing-lot-before.jpg",
+    "/images/work/clearing-lot-after.jpg",
+    "/images/work/clearing-trailer-street.jpg",
+  ],
+  "poda-tala": [
+    "/images/work/poda-climbing.jpg",
+    "/images/work/poda-chainsaw-tree.jpg",
+    "/images/work/poda-cypress-removal-2.jpg",
+    "/images/work/poda-cutting-trunk.jpg",
+    "/images/work/poda-storm-roof.jpg",
+    "/images/work/poda-olive-espalier.jpg",
+  ],
+  "gestio-restes": [
+    "/images/work/clearing-trailer-bags.jpg",
+    "/images/work/clearing-trailer-forest.jpg",
+    "/images/work/clearing-trailer-forest-2.jpg",
+  ],
+  "neteja-jardins": [
+    "/images/work/cleanup-path-before.jpg",
+    "/images/work/cleanup-driveway-after.jpg",
+    "/images/work/cleanup-patio-before.jpg",
+    "/images/work/cleanup-patio-after.jpg",
+  ],
+  "manteniment-jardins": [
+    "/images/work/garden-lemon-tree.jpg",
+    "/images/work/garden-patio-bench.jpg",
+    "/images/work/garden-conifer-patio.jpg",
+  ],
+  "tractaments-fitosanitaris": [
+    "/images/work/poda-cypress-removal-1.jpg",
+    "/images/work/poda-cypress-removal-2.jpg",
+  ],
+  "posta-a-punt": [
+    "/images/work/garden-patio-bench.jpg",
+    "/images/work/cleanup-driveway-after.jpg",
+    "/images/work/garden-conifer-patio.jpg",
+  ],
+};
+
+export function getServicePhotos(serviceId: string): WorkPhoto[] {
+  const srcs = servicePhotosBySlug[serviceId];
+  if (!srcs) return [];
+  return srcs
+    .map((src) => allWorkPhotos.find((photo) => photo.src === src))
+    .filter((photo): photo is WorkPhoto => Boolean(photo));
+}
