@@ -1,0 +1,215 @@
+{
+  "Meta": {
+    "siteName": "Jardí Verd",
+    "titleSuffix": "Jardí Verd — Jardineria i Arboricultura a Tarragona i Reus",
+    "home": {
+      "title": "Jardí Verd | Jardineria i Arboricultura a Tarragona i Reus",
+      "description": "Empresa familiar de jardineria i arboricultura amb més de 25 anys d'experiència a Tarragona, Reus i comarca. Pressupost sense compromís."
+    },
+    "services": {
+      "title": "Serveis de Jardineria i Arboricultura | Jardí Verd",
+      "description": "Desbrossament, poda i tala d'arbres, manteniment de jardins, tractaments fitosanitaris i molt més a Tarragona i Reus."
+    },
+    "areas": {
+      "title": "Zones de Servei | Jardí Verd",
+      "description": "Treballem a Tarragona, Reus, Salou, Cambrils, Vila-seca, Altafulla, Torredembarra, Valls, El Vendrell i Constantí."
+    },
+    "projects": {
+      "title": "Projectes | Jardí Verd",
+      "description": "Descobreix alguns dels treballs de jardineria i arboricultura que estem preparant per mostrar-te."
+    },
+    "about": {
+      "title": "Qui Som | Jardí Verd",
+      "description": "Més de 25 anys cuidant jardins a Tarragona i Reus. Empresa familiar, local i de confiança."
+    },
+    "contact": {
+      "title": "Contacte | Jardí Verd",
+      "description": "Demana un pressupost sense compromís. Truca'ns o escriu-nos per WhatsApp al 625 677 383."
+    }
+  },
+  "Nav": {
+    "home": "Inici",
+    "services": "Serveis",
+    "areas": "Zones",
+    "projects": "Projectes",
+    "about": "Qui som",
+    "contact": "Contacte",
+    "getQuote": "Demana pressupost",
+    "callNow": "Truca'ns"
+  },
+  "Header": {
+    "tagline": "Jardineria i Arboricultura"
+  },
+  "Hero": {
+    "eyebrow": "+25 anys a Tarragona i Reus",
+    "title": "Jardins cuidats per gent que hi viu, no que hi passa.",
+    "subtitle": "Jardineria i arboricultura professional per a particulars i comunitats a Tarragona, Reus i tota la comarca. Pressupost clar, sense sorpreses.",
+    "ctaPrimary": "Demana pressupost gratuït",
+    "ctaSecondary": "Truca'ns ara",
+    "stat1Value": "25+",
+    "stat1Label": "anys d'experiència",
+    "stat2Value": "10",
+    "stat2Label": "municipis atesos",
+    "stat3Value": "100%",
+    "stat3Label": "pressupostos sense compromís"
+  },
+  "TrustBar": {
+    "item1": "Empresa familiar i local",
+    "item2": "Més de 25 anys d'experiència",
+    "item3": "Pressupost sense compromís",
+    "item4": "Resposta ràpida per WhatsApp"
+  },
+  "ServicesSection": {
+    "eyebrow": "Els nostres serveis",
+    "title": "Tot el que necessita el teu jardí, en una sola empresa",
+    "subtitle": "Des del desbrossament més bàsic fins al disseny complet d'un jardí nou. Un sol equip de confiança per a totes les tasques.",
+    "viewAll": "Veure tots els serveis",
+    "learnMore": "Més informació"
+  },
+  "AreasSection": {
+    "eyebrow": "On treballem",
+    "title": "Servei a Tarragona, Reus i tota la comarca",
+    "subtitle": "Ens desplacem a aquests municipis i rodalies. Si no veus el teu, pregunta'ns igualment.",
+    "viewAll": "Veure totes les zones"
+  },
+  "Testimonials": {
+    "eyebrow": "El que diuen els nostres clients",
+    "title": "La confiança es cuida, com un jardí",
+    "items": [
+      {
+        "quote": "Porten més de deu anys mantenint el jardí de casa dels meus pares. Sempre puntuals i el jardí queda impecable.",
+        "author": "M. Ferré",
+        "location": "Tarragona"
+      },
+      {
+        "quote": "Van fer una tala complicada d'un arbre molt gran al costat de la piscina, amb molta cura i sense cap incident.",
+        "author": "J. Aguilar",
+        "location": "Reus"
+      },
+      {
+        "quote": "El pressupost va ser clar des del primer dia, sense sorpreses a la factura. Els recomano sense dubtar-ho.",
+        "author": "N. Solé",
+        "location": "Cambrils"
+      }
+    ]
+  },
+  "CtaBand": {
+    "title": "Parlem del teu jardí?",
+    "subtitle": "Explica'ns què necessites i et preparem un pressupost sense compromís en menys de 24 hores.",
+    "ctaPrimary": "Demana pressupost",
+    "ctaSecondary": "Escriu-nos per WhatsApp"
+  },
+  "Footer": {
+    "tagline": "Jardineria i arboricultura professional a Tarragona, Reus i comarca. Més de 25 anys d'experiència familiar.",
+    "columnServices": "Serveis",
+    "columnCompany": "Empresa",
+    "columnContact": "Contacte",
+    "columnLegal": "Legal",
+    "areasServed": "Zones de servei",
+    "privacyPolicy": "Política de privacitat",
+    "cookies": "Cookies",
+    "legalNotice": "Avís legal",
+    "rightsReserved": "Tots els drets reservats.",
+    "madeWith": "Jardineria i arboricultura a Tarragona i Reus"
+  },
+  "ServicesPage": {
+    "eyebrow": "Serveis",
+    "title": "Jardineria i arboricultura, de cap a cap",
+    "subtitle": "Vuit serveis especialitzats per cuidar el teu jardí o el teu arbrat durant tot l'any, tant si és una feina puntual com un manteniment continuat."
+  },
+  "ServiceDetail": {
+    "backToServices": "Tornar a serveis",
+    "whatWeDo": "Què inclou aquest servei",
+    "otherServices": "Altres serveis",
+    "ctaTitle": "T'interessa aquest servei?",
+    "ctaSubtitle": "Demana'ns un pressupost sense compromís, adaptat a les mides i necessitats del teu jardí.",
+    "ctaButton": "Demana pressupost"
+  },
+  "AreasPage": {
+    "eyebrow": "Zones de servei",
+    "title": "On oferim els nostres serveis",
+    "subtitle": "Treballem a Tarragona, Reus i els municipis del voltant. Coneixem el clima i el terreny de la zona, cosa que ens permet cuidar millor cada jardí.",
+    "notListed": "No veus el teu municipi?",
+    "notListedText": "Contacta amb nosaltres igualment: probablement també hi arribem."
+  },
+  "ProjectsPage": {
+    "eyebrow": "Projectes",
+    "title": "Estem preparant la nostra galeria",
+    "subtitle": "Estem recopilant fotografies dels nostres treballs més recents perquè puguis veure la qualitat de la nostra feina. Molt aviat podràs veure aquí projectes reals de poda, disseny i manteniment de jardins a Tarragona i Reus.",
+    "comingSoon": "Molt aviat",
+    "meanwhileTitle": "Mentrestant, explica'ns el teu projecte",
+    "meanwhileText": "Envia'ns fotos del teu jardí per WhatsApp i et donarem una primera valoració orientativa.",
+    "categoryPruning": "Poda i arboricultura",
+    "categoryDesign": "Disseny de jardins",
+    "categoryMaintenance": "Manteniment"
+  },
+  "AboutPage": {
+    "eyebrow": "Qui som",
+    "title": "Una empresa familiar amb les mans a la terra des de fa 25 anys",
+    "intro": "Jardí Verd va néixer a Tarragona com un projecte familiar amb una idea molt senzilla: cuidar els jardins com si fossin els nostres. Més de 25 anys després, seguim sent una empresa petita i local, amb l'experiència d'haver treballat en centenars de jardins i arbrats a tota la comarca.",
+    "valuesTitle": "Com treballem",
+    "value1Title": "Proximitat",
+    "value1Text": "Som d'aquí i coneixem el clima, el terreny i les espècies més adequades per a cada jardí de la zona.",
+    "value2Title": "Transparència",
+    "value2Text": "Pressupostos clars i sense sorpreses. Saps exactament què pagues i per què abans de començar.",
+    "value3Title": "Experiència",
+    "value3Text": "Més de 25 anys d'ofici, des del manteniment més senzill fins a la poda d'alçada més exigent.",
+    "value4Title": "Compromís",
+    "value4Text": "Tractem cada jardí amb la mateixa cura, tant si és una feina d'un dia com un manteniment de fa deu anys.",
+    "ctaTitle": "Vols conèixer-nos millor?",
+    "ctaText": "Truca'ns o escriu-nos, sense compromís."
+  },
+  "ContactPage": {
+    "eyebrow": "Contacte",
+    "title": "Parlem del teu jardí",
+    "subtitle": "Omple el formulari o contacta'ns directament per telèfon o WhatsApp. Responem en menys de 24 hores laborables.",
+    "directTitle": "Contacte directe",
+    "phoneLabel": "Telèfon i WhatsApp",
+    "areaLabel": "Zona de servei",
+    "areaText": "Tarragona, Reus i comarca",
+    "hoursLabel": "Horari",
+    "hoursText": "Dilluns a divendres, 8:00 - 18:00"
+  },
+  "ContactForm": {
+    "name": "Nom i cognoms",
+    "namePlaceholder": "El teu nom",
+    "phone": "Telèfon",
+    "phonePlaceholder": "625 000 000",
+    "email": "Correu electrònic",
+    "emailPlaceholder": "tu@exemple.com",
+    "city": "Municipi",
+    "cityPlaceholder": "Selecciona un municipi",
+    "cityOther": "Altre",
+    "service": "Servei d'interès",
+    "servicePlaceholder": "Selecciona un servei",
+    "serviceOther": "Un altre / no ho sé segur",
+    "message": "Missatge",
+    "messagePlaceholder": "Explica'ns breument què necessites...",
+    "submit": "Enviar sol·licitud",
+    "submitting": "Enviant...",
+    "privacyNote": "En enviar aquest formulari acceptes la nostra",
+    "privacyLink": "política de privacitat",
+    "successTitle": "Gràcies! Hem rebut la teva sol·licitud.",
+    "successText": "Ens posarem en contacte amb tu en menys de 24 hores laborables. Si és urgent, truca'ns directament.",
+    "errorTitle": "Alguna cosa ha fallat",
+    "errorText": "No hem pogut enviar el formulari. Prova de nou o truca'ns directament al 625 677 383.",
+    "errorRequired": "Aquest camp és obligatori",
+    "errorEmail": "Introdueix un correu vàlid",
+    "errorPhone": "Introdueix un telèfon vàlid"
+  },
+  "WhatsappButton": {
+    "label": "Escriu-nos per WhatsApp",
+    "defaultMessage": "Hola! M'agradaria demanar informació sobre els vostres serveis de jardineria."
+  },
+  "Legal": {
+    "privacyTitle": "Política de Privacitat",
+    "cookiesTitle": "Política de Cookies",
+    "legalNoticeTitle": "Avís Legal",
+    "placeholder": "Aquest text és un espai reservat i s'actualitzarà pròximament amb el contingut legal definitiu de Jardí Verd."
+  },
+  "NotFound": {
+    "title": "Pàgina no trobada",
+    "text": "La pàgina que busques no existeix o s'ha mogut.",
+    "cta": "Torna a l'inici"
+  }
+}
