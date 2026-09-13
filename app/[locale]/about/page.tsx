@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { businessInfo } from "@/lib/areas-data";
+import { getAlternates } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Link } from "@/i18n/navigation";
 import { LeafIcon, ShieldIcon, TreeIcon, CheckIcon, PhoneIcon } from "@/components/icons";
@@ -14,7 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta.about" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: getAlternates(() => "/about", locale),
+  };
 }
 
 export default async function AboutPage({

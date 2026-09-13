@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { services, getServiceBySlug } from "@/lib/services-data";
 import { getServicePhotos } from "@/lib/projects-data";
+import { getAlternates } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
@@ -28,6 +29,10 @@ export async function generateMetadata({
   return {
     title: `${service.title[locale]} | Jardí Verd`,
     description: service.shortDescription[locale],
+    alternates: getAlternates(
+      (l) => ({ pathname: "/services/[slug]", params: { slug: service.slug[l] } }),
+      locale
+    ),
   };
 }
 

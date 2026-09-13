@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { getAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Legal" });
-  return { title: `${t("legalNoticeTitle")} | Jardí Verd` };
+  return {
+    title: `${t("legalNoticeTitle")} | Jardí Verd`,
+    alternates: getAlternates(() => "/legal-notice", locale),
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function LegalNoticePage({

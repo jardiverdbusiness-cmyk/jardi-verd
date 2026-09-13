@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { getAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Legal" });
-  return { title: `${t("privacyTitle")} | Jardí Verd` };
+  return {
+    title: `${t("privacyTitle")} | Jardí Verd`,
+    alternates: getAlternates(() => "/privacy-policy", locale),
+    // Placeholder legal content — unindex until the real policy text is added.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function PrivacyPolicyPage({

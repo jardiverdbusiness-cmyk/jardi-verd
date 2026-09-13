@@ -9,6 +9,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
+import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 import "../globals.css";
 
 const fraunces = Fraunces({
@@ -34,6 +35,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jardiverd.com";
+  const ogImage = "/images/work/poda-cypress-removal-2.jpg";
 
   return {
     metadataBase: new URL(siteUrl),
@@ -41,17 +43,23 @@ export async function generateMetadata({
       default: "Jardí Verd",
       template: "%s",
     },
-    alternates: {
-      languages: {
-        ca: "/ca",
-        es: "/es",
-        en: "/en",
-      },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
     },
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
     openGraph: {
       siteName: "Jardí Verd",
       locale,
       type: "website",
+      images: [{ url: ogImage, width: 1200, height: 900 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [ogImage],
     },
   };
 }
@@ -75,6 +83,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${fraunces.variable} ${workSans.variable}`}>
       <body className="flex min-h-screen flex-col font-sans text-forest-900 antialiased">
+        <LocalBusinessSchema locale={locale as Locale} />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1 pb-16 sm:pb-0">{children}</main>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { getAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Legal" });
-  return { title: `${t("cookiesTitle")} | Jardí Verd` };
+  return {
+    title: `${t("cookiesTitle")} | Jardí Verd`,
+    alternates: getAlternates(() => "/cookies", locale),
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function CookiesPage({
