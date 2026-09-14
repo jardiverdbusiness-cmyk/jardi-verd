@@ -11,7 +11,7 @@ import { CheckIcon } from "./icons";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function ContactForm({ defaultService }: { defaultService?: string }) {
+export function ContactForm({ defaultServiceId }: { defaultServiceId?: string }) {
   const t = useTranslations("ContactForm");
   const locale = useLocale() as Locale;
   const pathname = usePathname();
@@ -141,14 +141,14 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       </div>
 
       <Field label={t("service")}>
-        <select name="service" defaultValue={defaultService ?? ""} className={inputClass}>
+        <select name="service" defaultValue={defaultServiceId ?? ""} className={inputClass}>
           <option value="">{t("servicePlaceholder")}</option>
           {services.map((service) => (
-            <option key={service.id} value={service.title[locale]}>
+            <option key={service.id} value={service.id}>
               {service.title[locale]}
             </option>
           ))}
-          <option value={t("serviceOther")}>{t("serviceOther")}</option>
+          <option value="other">{t("serviceOther")}</option>
         </select>
       </Field>
 

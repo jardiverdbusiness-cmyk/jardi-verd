@@ -1,4 +1,18 @@
 import type { ContactFormInput } from "./contact-schema";
+import { services } from "./services-data";
+
+const otherServiceLabel: Record<ContactFormInput["locale"], string> = {
+  ca: "Un altre / no ho sap segur",
+  es: "Otro / no lo sabe seguro",
+  en: "Other / not sure",
+};
+
+function resolveServiceName(serviceId: string, locale: ContactFormInput["locale"]) {
+  if (!serviceId) return "—";
+  if (serviceId === "other") return otherServiceLabel[locale];
+  const service = services.find((s) => s.id === serviceId);
+  return service ? service.title[locale] : serviceId;
+}
 
 const ownerCopy = {
   ca: { subject: "Nova sol·licitud de pressupost — Jardí Verd" },
@@ -47,7 +61,7 @@ export function buildOwnerNotificationEmail(data: ContactFormInput) {
     ["Telèfon", data.phone],
     ["Email", data.email],
     ["Municipi", data.city],
-    ["Servei", data.service || "—"],
+    ["Servei", resolveServiceName(data.service, data.locale)],
     ["Idioma", data.locale.toUpperCase()],
     ["Pàgina d'origen", data.sourcePath || "—"],
   ];

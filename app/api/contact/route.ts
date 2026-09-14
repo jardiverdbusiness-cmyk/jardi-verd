@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { contactFormSchema } from "@/lib/contact-schema";
 import { getSupabaseAdminClient } from "@/lib/supabase";
+import { isRateLimited } from "@/lib/rate-limit";
 import {
   buildLeadConfirmationEmail,
   buildOwnerNotificationEmail,
@@ -10,6 +11,18 @@ import {
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
+  const ip =
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown";
+
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();

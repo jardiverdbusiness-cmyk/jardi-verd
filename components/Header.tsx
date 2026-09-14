@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { businessInfo } from "@/lib/areas-data";
@@ -16,15 +16,37 @@ const navItems = [
   { href: "/contact", key: "contact" },
 ] as const;
 
+function isNavItemActive(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
   const t = useTranslations("Nav");
   const tHeader = useTranslations("Header");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-forest-900 text-cream-50 shadow-soft">
-      <div className="container-page flex h-20 items-center justify-between gap-4">
+    <header
+      className={`sticky top-0 z-50 bg-forest-900/95 text-cream-50 backdrop-blur transition-shadow duration-300 ${
+        scrolled ? "shadow-soft" : "shadow-none"
+      }`}
+    >
+      <div
+        className={`container-page flex items-center justify-between gap-4 transition-[height] duration-300 ${
+          scrolled ? "h-16" : "h-20"
+        }`}
+      >
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cream-100 text-forest-800">
             <LeafIcon className="h-5 w-5" />
@@ -41,7 +63,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-6 xl:flex">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = isNavItemActive(pathname, item.href);
             return (
               <Link
                 key={item.key}
@@ -91,7 +113,7 @@ export function Header() {
         <div className="border-t border-cream-50/10 bg-forest-900 xl:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = isNavItemActive(pathname, item.href);
               return (
                 <Link
                   key={item.key}
