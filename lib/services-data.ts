@@ -250,6 +250,7 @@ export const services: ServiceContent[] = [
   {
     id: "disseny-construccio",
     icon: "design",
+    image: "/images/work/garden-lemon-tree.jpg",
     slug: {
       ca: "disseny-i-construccio-de-jardins",
       es: "diseno-y-construccion-de-jardines",

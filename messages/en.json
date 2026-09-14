@@ -42,8 +42,8 @@
   },
   "Hero": {
     "eyebrow": "25+ years in Tarragona & Reus",
-    "title": "Gardens cared for by people who live in them, not just pass through.",
-    "subtitle": "Professional gardening and arboriculture for homes and communities across Tarragona, Reus and the surrounding area. Clear quotes, no surprises.",
+    "title": "Gardening & Arboriculture in Tarragona & Reus",
+    "subtitle": "We care for gardens as if they were our own: pruning, maintenance and design for homes and communities across the area. Clear quotes, no surprises.",
     "ctaPrimary": "Get a free quote",
     "ctaSecondary": "Call us now",
     "stat1Value": "25+",
@@ -51,7 +51,8 @@
     "stat2Value": "10",
     "stat2Label": "towns served",
     "stat3Value": "100%",
-    "stat3Label": "no-obligation quotes"
+    "stat3Label": "no-obligation quotes",
+    "imageAlt": "Jardí Verd team working on a controlled tree felling"
   },
   "TrustBar": {
     "item1": "Family-run & local",
@@ -142,7 +143,8 @@
     "afterLabel": "After",
     "categoryPruning": "Pruning & arboriculture",
     "categoryClearing": "Clearing & waste removal",
-    "categoryMaintenance": "Garden maintenance"
+    "categoryMaintenance": "Garden maintenance",
+    "beforeAfterHint": "Drag the line to compare before and after."
   },
   "AboutPage": {
     "eyebrow": "About us",
@@ -157,6 +159,9 @@
     "value3Text": "Over 25 years in the trade, from the simplest maintenance to the most demanding height pruning.",
     "value4Title": "Commitment",
     "value4Text": "We treat every garden with the same care, whether it's a one-day job or ten years of ongoing maintenance.",
+    "imageAlt1": "Jardí Verd team at work during a tree felling",
+    "imageAlt2": "Cutting a fallen pine tree with a chainsaw",
+    "imageAlt3": "Private garden maintained by Jardí Verd",
     "ctaTitle": "Want to get to know us better?",
     "ctaText": "Call or message us, no obligation."
   },
@@ -212,5 +217,32 @@
     "title": "Page not found",
     "text": "The page you're looking for doesn't exist or has moved.",
     "cta": "Back to home"
+  },
+  "Faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "What people usually ask us",
+    "subtitle": "If your question isn't here, call or message us — we reply quickly.",
+    "items": [
+      {
+        "q": "Do you offer free, no-obligation quotes?",
+        "a": "Yes, always. We visit your home or plot, assess the job and give you a clear price before starting — no surprises on the invoice."
+      },
+      {
+        "q": "What areas do you cover?",
+        "a": "We work in Tarragona, Reus, Salou, Cambrils, Vila-seca, Altafulla, Torredembarra, Valls, El Vendrell, Constantí and nearby towns. Don't see yours? Ask us anyway."
+      },
+      {
+        "q": "Are you equipped for difficult felling and height pruning jobs?",
+        "a": "Yes. We've spent over 25 years doing height pruning with climbing techniques and controlled felling in tight spaces, with the equipment and experience to work safely."
+      },
+      {
+        "q": "Can you come urgently if a tree falls or there's storm damage?",
+        "a": "Yes — for urgent cases like trees fallen on roofs, cars or driveways, we aim to respond the same day or the next. Call us directly."
+      },
+      {
+        "q": "Do you offer ongoing maintenance, or only one-off jobs?",
+        "a": "Both. We offer weekly, bi-weekly or monthly maintenance contracts, as well as one-off services like cleanups, seasonal tune-ups or specific tree work."
+      }
+    ]
   }
 }

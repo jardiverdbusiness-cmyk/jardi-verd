@@ -6,6 +6,7 @@ import { getAlternates } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { PhoneIcon, MapPinIcon, WhatsappIcon } from "@/components/icons";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export async function generateMetadata({
   params,
@@ -36,7 +37,14 @@ export default async function ContactPage({
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+      <PageHero
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+        breadcrumb={
+          <Breadcrumbs locale={locale} trail={[{ label: t("eyebrow"), href: "/contact" }]} />
+        }
+      />
 
       <section className="bg-cream-50 py-16 sm:py-20">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.3fr]">

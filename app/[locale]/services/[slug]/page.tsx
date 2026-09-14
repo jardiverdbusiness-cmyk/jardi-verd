@@ -5,11 +5,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { services, getServiceBySlug } from "@/lib/services-data";
 import { getServicePhotos } from "@/lib/projects-data";
+import { areas, businessInfo } from "@/lib/areas-data";
 import { getAlternates } from "@/lib/seo";
-import { Link } from "@/i18n/navigation";
+import { Link, getPathname } from "@/i18n/navigation";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { serviceIconMap, CheckIcon, ChevronRightIcon } from "@/components/icons";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -48,13 +50,52 @@ export default async function ServiceDetailPage({
   if (!service) notFound();
 
   const t = await getTranslations({ locale, namespace: "ServiceDetail" });
+  const tServices = await getTranslations({ locale, namespace: "ServicesPage" });
   const Icon = serviceIconMap[service.icon];
   const otherServices = services.filter((s) => s.id !== service.id).slice(0, 3);
   const galleryPhotos = getServicePhotos(service.id);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jardiverd.com";
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.title[locale],
+    name: service.title[locale],
+    description: service.shortDescription[locale],
+    provider: {
+      "@type": "LocalBusiness",
+      name: businessInfo.name,
+      telephone: businessInfo.phoneIntl,
+    },
+    areaServed: areas.map((area) => ({ "@type": "City", name: area.name })),
+    url: `${siteUrl}${getPathname({
+      locale,
+      href: { pathname: "/services/[slug]", params: { slug: service.slug[locale] } },
+    })}`,
+  };
+
   return (
     <>
-      <PageHero eyebrow={t("backToServices")} title={service.title[locale]}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <PageHero
+        eyebrow={t("backToServices")}
+        title={service.title[locale]}
+        breadcrumb={
+          <Breadcrumbs
+            locale={locale}
+            trail={[
+              { label: tServices("eyebrow"), href: "/services" },
+              {
+                label: service.title[locale],
+                href: { pathname: "/services/[slug]", params: { slug: service.slug[locale] } },
+              },
+            ]}
+          />
+        }
+      >
         <Link
           href="/services"
           className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cream-100/80 hover:text-cream-50"
@@ -143,7 +184,7 @@ export default async function ServiceDetailPage({
                 {t("ctaSubtitle")}
               </p>
               <div className="mt-6">
-                <ContactForm defaultService={service.title[locale]} />
+                <ContactForm defaultServiceId={service.id} />
               </div>
             </div>
           </div>

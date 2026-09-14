@@ -4,16 +4,19 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  breadcrumb,
   children,
 }: {
   eyebrow: string;
   title: string;
   subtitle?: string;
+  breadcrumb?: ReactNode;
   children?: ReactNode;
 }) {
   return (
     <section className="bg-forest-900 text-cream-50">
       <div className="container-page py-16 sm:py-20">
+        {breadcrumb && <div className="mb-5">{breadcrumb}</div>}
         <span className="inline-flex items-center rounded-pill bg-forest-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-gold-400">
           {eyebrow}
         </span>

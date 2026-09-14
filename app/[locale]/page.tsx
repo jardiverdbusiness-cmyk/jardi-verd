@@ -7,6 +7,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { ServicesSection } from "@/components/ServicesSection";
 import { AreasSection } from "@/components/AreasSection";
 import { Testimonials } from "@/components/Testimonials";
+import { FaqSection } from "@/components/FaqSection";
 import { CtaBand } from "@/components/CtaBand";
 
 export async function generateMetadata({
@@ -38,6 +39,7 @@ export default async function HomePage({
       <ServicesSection locale={locale} />
       <AreasSection />
       <Testimonials />
+      <FaqSection locale={locale} />
       <CtaBand />
     </>
   );

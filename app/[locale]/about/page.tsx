@@ -7,6 +7,8 @@ import { getAlternates } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Link } from "@/i18n/navigation";
 import { LeafIcon, ShieldIcon, TreeIcon, CheckIcon, PhoneIcon } from "@/components/icons";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Reveal } from "@/components/Reveal";
 
 export async function generateMetadata({
   params,
@@ -40,7 +42,14 @@ export default async function AboutPage({
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("title")} subtitle={t("intro")} />
+      <PageHero
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("intro")}
+        breadcrumb={
+          <Breadcrumbs locale={locale} trail={[{ label: t("eyebrow"), href: "/about" }]} />
+        }
+      />
 
       <section className="bg-cream-50 py-16 sm:py-20">
         <div className="container-page">
@@ -48,7 +57,7 @@ export default async function AboutPage({
             <div className="relative col-span-2 row-span-2 aspect-[4/3] overflow-hidden rounded-xl2">
               <Image
                 src="/images/work/poda-cypress-removal-2.jpg"
-                alt="Equip de Jardí Verd treballant en una tala"
+                alt={t("imageAlt1")}
                 fill
                 sizes="(min-width: 640px) 60vw, 100vw"
                 className="object-cover"
@@ -57,7 +66,7 @@ export default async function AboutPage({
             <div className="relative aspect-square overflow-hidden rounded-xl2">
               <Image
                 src="/images/work/poda-storm-cutting.jpg"
-                alt="Trossejant un pi caigut amb motoserra"
+                alt={t("imageAlt2")}
                 fill
                 sizes="(min-width: 640px) 20vw, 50vw"
                 className="object-cover"
@@ -66,7 +75,7 @@ export default async function AboutPage({
             <div className="relative aspect-square overflow-hidden rounded-xl2">
               <Image
                 src="/images/work/garden-lemon-tree.jpg"
-                alt="Jardí particular cuidat per Jardí Verd"
+                alt={t("imageAlt3")}
                 fill
                 sizes="(min-width: 640px) 20vw, 50vw"
                 className="object-cover"
@@ -78,27 +87,26 @@ export default async function AboutPage({
             {t("valuesTitle")}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            {values.map(({ icon: Icon, title, text }) => (
-              <div
-                key={title}
-                className="flex gap-4 rounded-xl2 border border-forest-900/8 bg-white p-6 shadow-soft"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-700">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <div>
-                  <h3 className="font-display text-base font-semibold text-forest-900">
-                    {title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-forest-800/70">
-                    {text}
-                  </p>
+            {values.map(({ icon: Icon, title, text }, index) => (
+              <Reveal key={title} delay={(index % 2) * 100}>
+                <div className="flex gap-4 rounded-xl2 border border-forest-900/8 bg-white p-6 shadow-soft transition-shadow hover:shadow-card">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-700">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h3 className="font-display text-base font-semibold text-forest-900">
+                      {title}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-forest-800/70">
+                      {text}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 
-          <div className="mt-14 flex flex-col items-center gap-4 rounded-xl2 bg-forest-900 p-10 text-center text-cream-50">
+          <Reveal className="mt-14 flex flex-col items-center gap-4 rounded-xl2 bg-forest-900 p-10 text-center text-cream-50">
             <h2 className="font-display text-xl font-semibold">{t("ctaTitle")}</h2>
             <p className="max-w-md text-sm leading-relaxed text-cream-100/80">
               {t("ctaText")}
@@ -118,7 +126,7 @@ export default async function AboutPage({
                 {t("ctaText")}
               </Link>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

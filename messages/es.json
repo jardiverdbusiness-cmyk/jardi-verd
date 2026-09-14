@@ -42,8 +42,8 @@
   },
   "Hero": {
     "eyebrow": "+25 años en Tarragona y Reus",
-    "title": "Jardines cuidados por gente que los vive, no que pasa por ellos.",
-    "subtitle": "Jardinería y arboricultura profesional para particulares y comunidades en Tarragona, Reus y toda la comarca. Presupuesto claro, sin sorpresas.",
+    "title": "Jardinería y Arboricultura en Tarragona y Reus",
+    "subtitle": "Cuidamos jardines como si fueran nuestros: poda, mantenimiento y diseño para particulares y comunidades de toda la comarca. Presupuesto claro, sin sorpresas.",
     "ctaPrimary": "Pide presupuesto gratuito",
     "ctaSecondary": "Llámanos ahora",
     "stat1Value": "25+",
@@ -51,7 +51,8 @@
     "stat2Value": "10",
     "stat2Label": "municipios atendidos",
     "stat3Value": "100%",
-    "stat3Label": "presupuestos sin compromiso"
+    "stat3Label": "presupuestos sin compromiso",
+    "imageAlt": "Equipo de Jardí Verd trabajando en una tala controlada"
   },
   "TrustBar": {
     "item1": "Empresa familiar y local",
@@ -142,7 +143,8 @@
     "afterLabel": "Después",
     "categoryPruning": "Poda y arboricultura",
     "categoryClearing": "Desbroce y gestión de restos",
-    "categoryMaintenance": "Mantenimiento de jardines"
+    "categoryMaintenance": "Mantenimiento de jardines",
+    "beforeAfterHint": "Arrastra la línea para comparar el antes y el después."
   },
   "AboutPage": {
     "eyebrow": "Sobre nosotros",
@@ -157,6 +159,9 @@
     "value3Text": "Más de 25 años de oficio, desde el mantenimiento más sencillo hasta la poda en altura más exigente.",
     "value4Title": "Compromiso",
     "value4Text": "Tratamos cada jardín con el mismo cuidado, ya sea un trabajo de un día o un mantenimiento de hace diez años.",
+    "imageAlt1": "Equipo de Jardí Verd trabajando en una tala",
+    "imageAlt2": "Trozando un pino caído con motosierra",
+    "imageAlt3": "Jardín particular cuidado por Jardí Verd",
     "ctaTitle": "¿Quieres conocernos mejor?",
     "ctaText": "Llámanos o escríbenos, sin compromiso."
   },
@@ -212,5 +217,32 @@
     "title": "Página no encontrada",
     "text": "La página que buscas no existe o se ha movido.",
     "cta": "Volver al inicio"
+  },
+  "Faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Lo que suele preguntar la gente",
+    "subtitle": "Si tienes una duda que no aparece aquí, llámanos o escríbenos: respondemos rápido.",
+    "items": [
+      {
+        "q": "¿Hacéis presupuestos gratuitos y sin compromiso?",
+        "a": "Sí, siempre. Visitamos tu casa o terreno, valoramos el trabajo y te damos un precio claro antes de empezar, sin sorpresas en la factura."
+      },
+      {
+        "q": "¿En qué zonas trabajáis?",
+        "a": "Trabajamos en Tarragona, Reus, Salou, Cambrils, Vila-seca, Altafulla, Torredembarra, Valls, El Vendrell, Constantí y municipios de alrededor. Si no ves tu pueblo, pregúntanos igualmente."
+      },
+      {
+        "q": "¿Estáis preparados para talas y podas en altura complicadas?",
+        "a": "Sí. Llevamos más de 25 años realizando poda en altura con técnicas de trepa y tala controlada en espacios reducidos, con el equipo y la experiencia necesarios para trabajar con seguridad."
+      },
+      {
+        "q": "¿Podéis venir de forma urgente si cae un árbol o hay daños por un temporal?",
+        "a": "Sí, intentamos dar respuesta el mismo día o al día siguiente en casos urgentes como árboles caídos sobre tejados, coches o accesos. Llámanos directamente."
+      },
+      {
+        "q": "¿Hacéis mantenimiento periódico o solo trabajos puntuales?",
+        "a": "Ambas cosas. Ofrecemos contratos de mantenimiento semanal, quincenal o mensual, y también servicios puntuales como limpiezas, puestas a punto o talas concretas."
+      }
+    ]
   }
 }

@@ -6,6 +6,8 @@ import { getAlternates } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CtaBand } from "@/components/CtaBand";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Reveal } from "@/components/Reveal";
 
 export async function generateMetadata({
   params,
@@ -32,11 +34,20 @@ export default async function ServicesPage({
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+      <PageHero
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+        breadcrumb={
+          <Breadcrumbs locale={locale} trail={[{ label: t("eyebrow"), href: "/services" }]} />
+        }
+      />
       <section className="bg-cream-50 py-16 sm:py-20">
         <div className="container-page grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} locale={locale} />
+          {services.map((service, index) => (
+            <Reveal key={service.id} delay={(index % 3) * 100}>
+              <ServiceCard service={service} locale={locale} />
+            </Reveal>
           ))}
         </div>
       </section>
